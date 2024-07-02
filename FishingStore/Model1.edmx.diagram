@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="252173022de446ef890b466425558c57" Name="Diagram1">
+        <EntityTypeShape EntityType="FishingStoreDBModel.OrderItems" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FishingStoreDBModel.Orders" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FishingStoreDBModel.Products" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FishingStoreDBModel.Users" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="FishingStoreDBModel.FK__OrderItem__Order__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="FishingStoreDBModel.FK__OrderItem__Produ__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="FishingStoreDBModel.FK__Orders__UserId__3B75D760" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
