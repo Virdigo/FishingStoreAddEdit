@@ -24,6 +24,7 @@
             <Button Content="Edit Product" Click="EditProductButton_Click" Margin="10"/>
             <Button Content="Delete Product" Click="DeleteProductButton_Click" Margin="10"/>
             <Button Content="Refresh" Click="RefreshButton_Click" Margin="10"/>
+            <Button Content="Order" Click="Button_Click"  Margin="10"/>
         </StackPanel>
     </Grid>
 </Page>

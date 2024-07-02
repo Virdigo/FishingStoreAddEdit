@@ -9,7 +9,7 @@
       Title="OrdersPage">
 
     <Grid>
-        <ListView ItemsSource="{Binding Orders}" Name="OrderListView">
+        <ListView x:Name="OrderListView" ItemsSource="{Binding Orders}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Order ID" DisplayMemberBinding="{Binding Id}" Width="100"/>
@@ -18,8 +18,11 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Add Order" Click="AddOrderButton_Click" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-        <Button Content="Edit Order" Click="EditOrderButton_Click" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10">
+            <Button Content="Add Order" Click="AddOrderButton_Click" Margin="10"/>
+            <Button Content="Edit Order" Click="EditOrderButton_Click" Margin="10"/>
+            <Button Content="Refresh" Click="RefreshButton_Click" Margin="10"/>
+        </StackPanel>
     </Grid>
 </Page>
 

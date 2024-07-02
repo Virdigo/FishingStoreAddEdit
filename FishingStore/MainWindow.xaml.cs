@@ -39,7 +39,7 @@ namespace FishingStore
             }
             else if (user.Role == "Admin")
             {
-                MainFrame.Navigate(new ProductsPage()); // Navigate to Admin page if needed
+                MainFrame.Navigate(new ProductsPage()); 
             }
         }
     }

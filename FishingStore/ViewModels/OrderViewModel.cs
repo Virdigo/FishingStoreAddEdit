@@ -9,7 +9,7 @@ using System.Windows.Controls;
 
 namespace FishingStore.ViewModels
 {
-    internal class OrderViewModel : BaseViewModel
+    public class OrderViewModel : BaseViewModel
     {
         public OrderService _orderService;
         public ObservableCollection<Orders> Orders { get; set; }
@@ -17,9 +17,18 @@ namespace FishingStore.ViewModels
         public OrderViewModel()
         {
             _orderService = new OrderService();
-            Orders = new ObservableCollection<Orders>(_orderService.GetOrders());
+            Orders = new ObservableCollection<Orders>();
+            LoadOrders();
         }
 
-        // Implement other necessary methods like AddOrder, EditOrder, etc.
+        public void LoadOrders()
+        {
+            Orders.Clear();
+            var orders = _orderService.GetOrders();
+            foreach (var order in orders)
+            {
+                Orders.Add(order);
+            }
+        }
     }
 }

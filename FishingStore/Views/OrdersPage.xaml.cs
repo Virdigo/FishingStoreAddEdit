@@ -32,20 +32,20 @@ namespace FishingStore.Views
 
         private void AddOrderButton_Click(object sender, RoutedEventArgs e)
         {
-            // Code to add a new order
-            var newOrder = new Orders { UserId = 1, OrderDate = DateTime.Now };
-            _viewModel.Orders.Add(newOrder);
-            _viewModel._orderService.AddOrder(newOrder);
+            NavigationService.Navigate(new OrderDetailPage(_viewModel));
         }
 
         private void EditOrderButton_Click(object sender, RoutedEventArgs e)
         {
-            // Code to edit an order
             if (OrderListView.SelectedItem is Orders selectedOrder)
             {
-                selectedOrder.OrderDate = DateTime.Now;
-                _viewModel._orderService.EditOrder(selectedOrder);
+                NavigationService.Navigate(new OrderDetailPage(_viewModel, selectedOrder));
             }
+        }
+
+        private void RefreshButton_Click(object sender, RoutedEventArgs e)
+        {
+            _viewModel.LoadOrders();
         }
     }
 }
